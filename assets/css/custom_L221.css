@@ -49,7 +49,6 @@
     animation: effet_pop 1.5s ease-in-out infinite; 
 }
 
-
     /*-----Animation 3D 1-----*/
 .conteneur{
     width: 9rem;
@@ -104,4 +103,23 @@
     55%,100%{
         opacity: 0;
     }
+}
+/* Les chiffres des stats s'agrandissent au survol et se rétrécissent quand on est plus dans la zone*/
+.footer-stats-item-number {
+    transition: transform 0.3s ease;
+}
+
+.footer-stats-item:hover .footer-stats-item-number {
+    transform: scale(1.2);
+}
+
+/* Décale les logos au survol et écarte le texte grâce à text-indent*/
+.footer-social-icon {
+    transition: transform 0.3s ease; 
+    text-indent: 0;
+}
+
+.footer-social-icon:hover {
+    transform: translateX(3px);
+    text-indent: 5px;
 }
