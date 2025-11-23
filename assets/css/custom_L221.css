@@ -1,0 +1,51 @@
+/*On définit la transition sur .button pour avoir un retour fluide quand on ne survole plus*/
+    /*-----Transformation 1-----*/
+.button{
+    transition-property: transform;
+    transition-duration: 0.5s;
+    transition-timing-function: ease;
+}
+
+.button:hover{
+    transform: scaleX(1.2) scaleY(1.2);
+}
+
+    /*-----Transformation 2-----*/
+.tops-item{
+    transition-property: transform;
+    transition-duration: 0.2s;
+    transition-timing-function: linear;
+    /*ces 3 propriétés peuvent être écrites en une ligne : transition : transform 0.2s linear; */
+}
+
+.tops-item:hover{
+    transform: skewX(-8deg) translateX(10px);
+}
+
+    /*-----Transformation 3-----*/
+.main-nav-item{
+    transition: transform 0.3s ease-out;
+}
+
+.main-nav-item:hover{
+    transform: scale(1.2);
+}
+
+    /*-----Animation 1-----*/
+/*On crée une animation pop*/
+@keyframes effet_pop{
+    /*Au départ et à la fin, l'élément est à la taille initiale*/
+    0%, 100%{
+        transform:  scale(1);
+    }
+    /*A mi-chemin, l'élément est agrandi*/
+    50%{
+        transform: scale(1.1);
+    }
+}
+
+.ideas-col:hover{
+    /*On lance l'animation, fonctionne tant que le hover est actif (inifinite), 1,5s est la durée d'une boucle complète*/
+    animation: effet_pop 1.5s ease-in-out infinite; 
+}
+
