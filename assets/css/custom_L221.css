@@ -1,5 +1,6 @@
-/*On définit la transition sur .button pour avoir un retour fluide quand on ne survole plus*/
     /*-----Transformation 1-----*/
+
+/*On définit la transition sur .button pour avoir un retour fluide quand on ne survole plus*/
 .button{
     transition-property: transform;
     transition-duration: 0.5s;
@@ -9,6 +10,7 @@
 .button:hover{
     transform: scaleX(1.2) scaleY(1.2);
 }
+
 
     /*-----Transformation 2-----*/
 .tops-item{
@@ -22,7 +24,18 @@
     transform: skewX(-8deg) translateX(10px);
 }
 
+
     /*-----Transformation 3-----*/
+.header-nav-item{
+    transition: transform 0.3s ease-out;
+}
+
+.header-nav-item:hover{
+    transform: translateY(5px) scale(1.05);
+}
+
+
+    /*-----Transformation 4-----*/
 .main-nav-item{
     transition: transform 0.3s ease-out;
 }
@@ -30,6 +43,7 @@
 .main-nav-item:hover{
     transform: scale(1.2);
 }
+
 
     /*-----Animation 1-----*/
 /*On crée une animation pop*/
@@ -46,8 +60,9 @@
 
 .ideas-col:hover{
     /*On lance l'animation, fonctionne tant que le hover est actif (inifinite), 1,5s est la durée d'une boucle complète*/
-    animation: effet_pop 1.5s ease-in-out infinite; 
+    animation: effet_pop 1.3s ease-in-out infinite; 
 }
+
 
     /*-----Animation 3D 1-----*/
 .conteneur{
@@ -93,17 +108,19 @@
 
 @keyframes cache_dos{
     /*Dos invisible au début*/
-    0%,45%{
+    0%,46%{
         opacity: 0;
     }
     50%{
         opacity: 1;
     }
     /*Dos invisible à la fin*/
-    55%,100%{
+    54%,100%{
         opacity: 0;
     }
 }
+
+
 /* Les chiffres des stats s'agrandissent au survol et se rétrécissent quand on est plus dans la zone*/
 .footer-stats-item-number {
     transition: transform 0.3s ease;
