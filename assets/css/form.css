@@ -1,0 +1,21 @@
+.form_UE_L221{
+    background-color: #D1E5C5;
+}
+
+.devis-form-fieldset{
+    margin-block: 3rem;
+    padding: 1rem 2rem;
+    text-align: center;
+    background-color: #fefefe;
+    border-radius: 25px;
+    border-style: none;
+    box-shadow: 3px 3px 5px#1b1b1b33;
+}
+
+.devis-form-columns{
+    display: flex;
+}
+
+.devis-form-column{
+    flex-direction: column;
+}
