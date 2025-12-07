@@ -131,8 +131,14 @@ select.devis-form-input.form-select:invalid  {
     color: red !important;
 }
 
+.form-check-input[type="radio"]{
+    border-color: #74aa53;
+}
+.form-check-input[type="radio"]:checked{
+    background-color: #74aa53;
+}
 /* CHECKBOX consentement */
-#devis-consent {
+#devis-consent{
     width: auto;
     margin-right: 0.5rem;
     accent-color: var(--primary-color);
@@ -155,6 +161,16 @@ select.devis-form-input.form-select:invalid  {
 }
 
 /*Mise en forme de la vidéo et des boutons*/
+.colonne-video{
+    background-color: var(--secondary-color);
+    border-radius: 20px;
+    padding: 1rem;
+}
+
+.colonne-video p{
+    color: white;
+}
+
 #form-video-zone {
     max-width: 595px;
     margin: 50px auto;

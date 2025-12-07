@@ -348,136 +348,140 @@
         <div class="alert alert-info mb-4" role="alert">
             Indiquez vos préférences, nous vous proposerons une offre personnalisée sous 48h.
         </div>
-    <form action="#" class="devis-form">
-        <fieldset class="devis-form-fieldset">
-            <legend class="devis-form-legend">Votre devis personnalisé</legend>
-        
-            <p class="text-center mb-4">
-                Remplissez le formulaire ci-dessous et un de nos conseillers vous contactera
-                dans les plus brefs délais pour organiser votre voyage sur-mesure.
-            </p>
+        <form action="#" class="devis-form">
+            <fieldset class="devis-form-fieldset">
+                <legend class="devis-form-legend">Votre devis personnalisé</legend>
+            
+                <p class="text-center mb-4">
+                    Remplissez le formulaire ci-dessous et un de nos conseillers vous contactera
+                    dans les plus brefs délais pour organiser votre voyage sur-mesure.
+                </p>
 
-            <div class="container">
-                <div class="row">
-                    <div class="col-12 col-md-8">
-                        <div class="row">
-                            <!-- Colonne 1 -->
-                            <div class="col-md-6">
-                                <div class="form-group devis-form-item">
-                                    <label class="devis-form-label" for="devis-type-sejour">Type de séjour</label>
-                                    <select name="devis-type-sejour" id="devis-type-sejour"class="devis-form-input form-select">
-                                        <option value="" selected hidden>Sélectionnez un type</option>
-                                        <option value="sejour_classique">Séjour classique (hôtel + vol)</option>
-                                        <option value="circuit_organise">Circuit organisé</option>
-                                        <option value="croisiere">Croisière</option>
-                                        <option value="bien_etre">Séjour bien être</option>
-                                        <option value="sejour_montagne">Séjour à la montagne</option>
-                                        <option value="sejour_mer">Séjour à la mer</option>
-                                        <option value="week-end">Week-end</option>
-                                    </select>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12 col-md-8">
+                            <div class="row">
+                                <!-- Colonne 1 -->
+                                <div class="col-md-6">
+                                    <div class="form-group devis-form-item">
+                                        <label class="devis-form-label" for="devis-type-sejour">Type de séjour</label>
+                                        <select name="devis-type-sejour" id="devis-type-sejour"class="devis-form-input form-select">
+                                            <option value="" selected hidden>Sélectionnez un type</option>
+                                            <option value="sejour_classique">Séjour classique (hôtel + vol)</option>
+                                            <option value="circuit_organise">Circuit organisé</option>
+                                            <option value="croisiere">Croisière</option>
+                                            <option value="bien_etre">Séjour bien être</option>
+                                            <option value="sejour_montagne">Séjour à la montagne</option>
+                                            <option value="sejour_mer">Séjour à la mer</option>
+                                            <option value="week-end">Week-end</option>
+                                        </select>
+                                    </div>
+
+                                    <div class="form-group devis-form-item">
+                                        <label class="devis-form-label" for="devis-pays">Pays souhaité</label>
+                                        <input class="devis-form-input form-control" type="text" name="devis-pays" id="devis-pays" required placeholder="Ex : France, Japon, Inde, Maroc ...">
+                                    </div>
+
+                                    <div class="form-group devis-form-item">
+                                        <label class="devis-form-label" for="devis-ville">Ville souhaitée</label>
+                                        <input class="devis-form-input form-control" type="text" name="devis-ville" id="devis-ville" placeholder="Ex : Paris, Londres, Tokyo, Los Angeles ...">
+                                    </div>
+
+                                    <div class="form-group devis-form-item">
+                                        <label for="devis-adultes" class="devis-form-label">Nombre de voyageurs</label>
+                                        <select id="devis-adultes" class="devis-form-input form-select">
+                                            <option value="" selected hidden>0</option>
+                                            <option>1</option><option>2</option><option>3</option><option>4</option>
+                                            <option>5</option><option>6</option><option>7</option><option>8</option><option>9</option>
+                                        </select>
+                                    </div>
+                                    <div class="mb-3">
+                                        <span class="d-block mb-1 devis-form-label">Ambiance(s) souhaitée(s)</span>
+                                            <div class="form-check form-check-inline">
+                                                <input class="form-check-input" type="radio" name="ambiance" id="ambiance-detente" value="detente" checked>
+                                                    <label class="form-check-label" for="ambiance-detente">Détente</label>
+                                            </div>
+                                            <div class="form-check form-check-inline">
+                                                <input class="form-check-input" type="radio" name="ambiance" id="ambiance-aventure" value="aventure">
+                                                    <label class="form-check-label" for="ambiance-aventure">Aventure</label>
+                                            </div>
+                                            <div class="form-check form-check-inline">
+                                                <input class="form-check-input" type="radio" name="culture" id="ambiance-culture" value="culture">
+                                                    <label class="form-check-label" for="ambiance-aventure">Culture</label>
+                                            </div>
+                                    </div>
+                                </div><!-- eof col 1 -->
+
+                                <!-- Colonne 2 -->
+                                <div class="col-md-6">
+                                    <div class="form-group devis-form-item">
+                                        <label class="devis-form-label" for="devis-duree">Durée du séjour</label>
+                                        <input class="devis-form-input form-control" type="text" name="devis-duree" id="devis-duree" placeholder="Nombre de jours">
+                                    </div>
+
+                                    <div class="form-group devis-form-item">
+                                        <label class="devis-form-label" for="devis-start">Date de départ</label>
+                                        <input class="devis-form-input form-control" type="date" name="devis-start" id="devis-start" required>
+                                    </div>
+
+                                    <div class="form-group devis-form-item">
+                                        <label class="devis-form-label" for="devis-budget">Budget envisagé</label>
+                                        <select name="devis-budget" id="devis-budget" class="devis-form-input form-select">
+                                            <option value="" selected hidden>Sélectionnez votre budget</option>
+                                            <option>< 500 €</option>
+                                            <option>500 € à 1 000 €</option>
+                                            <option>1 000 € à 2 000 €</option>
+                                            <option>> 2 000 €</option>
+                                        </select>
+                                    </div>
+
+                                    <div class="form-group devis-form-item">
+                                        <label class="devis-form-label" for="devis-commentaire">
+                                            Commentaire ou demande spécifique
+                                        </label>
+                                        <input class="devis-form-input form-control" type="text" name="devis-commentaire" id="devis-commentaire" placeholder="Laissez nous savoir">
+                                    </div>
+                                    
+                                </div><!-- eof col 2 -->
+                            </div><!-- eof row -->
+
+                            <div class="devis-coordonnees row me-3">
+                                <p class="devis_form_coordonnees">Vos coordonnées</p>
+
+                                <div class="col-md-6 form-group devis-form-item">
+                                    <label class="devis-form-label" for="devis-mail">Mail</label>
+                                    <input class="devis-form-input form-control" type="email" name="devis-mail" id="devis-mail" required>
                                 </div>
 
-                                <div class="form-group devis-form-item">
-                                    <label class="devis-form-label" for="devis-pays">Pays souhaité</label>
-                                    <input class="devis-form-input form-control" type="text" name="devis-pays" id="devis-pays" required placeholder="Ex : France, Japon, Inde, Maroc ...">
+                                <div class="col-md-6 form-group devis-form-item">
+                                    <label class="devis-form-label" for="devis-tel">Téléphone</label>
+                                    <input class="devis-form-input form-control" type="text" name="devis-tel" id="devis-tel" required>
                                 </div>
 
-                                <div class="form-group devis-form-item">
-                                    <label class="devis-form-label" for="devis-ville">Ville souhaitée</label>
-                                    <input class="devis-form-input form-control" type="text" name="devis-ville" id="devis-ville" placeholder="Ex : Paris, Londres, Tokyo, Los Angeles ...">
+                                <!-- Consentement -->
+                                <div class="col-12 form-group devis-form-item consent">
+                                    <input class="devis-form-input" type="checkbox" name="devis-consent" id="devis-consent" required>
+                                    <label class="form-check-label" for="devis-consent">Je consens à ce que mes informations soient récupérées et traitées pour ensuite être contacté
+                                        par un conseiller Voyage Tour</label>.
                                 </div>
+                            </div><!-- eof row -->
 
-                                <div class="form-group devis-form-item">
-                                    <label for="devis-adultes" class="devis-form-label">Nombre de voyageurs</label>
-                                    <select id="devis-adultes" class="devis-form-input form-select">
-                                        <option value="" selected hidden>0</option>
-                                        <option>1</option><option>2</option><option>3</option><option>4</option>
-                                        <option>5</option><option>6</option><option>7</option><option>8</option><option>9</option>
-                                    </select>
-                                </div>
-                                <div class="mb-3">
-                                    <span class="d-block mb-1 devis-form-label">Ambiance souhaitée</span>
-                                        <div class="form-check form-check-inline">
-                                            <input class="form-check-input" type="radio" name="ambiance" id="ambiance-detente" value="detente" checked>
-                                                <label class="form-check-label" for="ambiance-detente">Détente</label>
-                                        </div>
-                                        <div class="form-check form-check-inline">
-                                            <input class="form-check-input" type="radio" name="ambiance" id="ambiance-aventure" value="aventure">
-                                                <label class="form-check-label" for="ambiance-aventure">Aventure</label>
-                                        </div>
-                                </div>
-                            </div><!-- eof col 1 -->
-
-                            <!-- Colonne 2 -->
-                            <div class="col-md-6">
-                                <div class="form-group devis-form-item">
-                                    <label class="devis-form-label" for="devis-duree">Durée du séjour</label>
-                                    <input class="devis-form-input form-control" type="text" name="devis-duree" id="devis-duree" placeholder="Nombre de jours">
-                                </div>
-
-                                <div class="form-group devis-form-item">
-                                    <label class="devis-form-label" for="devis-start">Date de départ</label>
-                                    <input class="devis-form-input form-control" type="date" name="devis-start" id="devis-start" required>
-                                </div>
-
-                                <div class="form-group devis-form-item">
-                                    <label class="devis-form-label" for="devis-budget">Budget envisagé</label>
-                                    <select name="devis-budget" id="devis-budget" class="devis-form-input form-select">
-                                        <option value="" selected hidden>Sélectionnez votre budget</option>
-                                        <option>< 500 €</option>
-                                        <option>500 € à 1 000 €</option>
-                                        <option>1 000 € à 2 000 €</option>
-                                        <option>> 2 000 €</option>
-                                    </select>
-                                </div>
-
-                                <div class="form-group devis-form-item">
-                                    <label class="devis-form-label" for="devis-commentaire">
-                                        Commentaire ou demande spécifique
-                                    </label>
-                                    <input class="devis-form-input form-control" type="text" name="devis-commentaire" id="devis-commentaire" placeholder="Laissez nous savoir">
-                                </div>
-                                
-                            </div><!-- eof col 2 -->
-                        </div><!-- eof row -->
-
-                        <div class="devis-coordonnees row">
-                            <p class="devis_form_coordonnees">Vos coordonnées</p>
-
-                            <div class="col-md-6 form-group devis-form-item">
-                                <label class="devis-form-label" for="devis-mail">Mail</label>
-                                <input class="devis-form-input form-control" type="email" name="devis-mail" id="devis-mail" required>
+                            <!-- Bouton submit -->
+                            <div class="col-12 form-group devis-form-item text-center">
+                                <button class="button btn-primary" type="submit">Envoyer</button>
                             </div>
+                        </div><!-- eof col-8 -->
 
-                            <div class="col-md-6 form-group devis-form-item">
-                                <label class="devis-form-label" for="devis-tel">Téléphone</label>
-                                <input class="devis-form-input form-control" type="text" name="devis-tel" id="devis-tel" required>
-                            </div>
-
-                            <!-- Consentement -->
-                            <div class="col-12 form-group devis-form-item consent">
-                                <input class="devis-form-input" type="checkbox" name="devis-consent" id="devis-consent" required>
-                                <label class="form-check-label" for="devis-consent">Je consens à ce que mes informations soient récupérées et traitées pour ensuite être contacté
-                                    par un conseiller Voyage Tour</label>.
-                            </div>
-                        </div><!-- eof row -->
-
-                        <!-- Bouton submit -->
-                        <div class="col-12 form-group devis-form-item text-center">
-                            <button class="button btn-primary" type="submit">Envoyer</button>
-                        </div>
-                    </div><!-- eof col-8 -->
-
-                    <!--  Colonne droite (vidéo) -->
-                    <div class="col-12 col-md-4">
-                        <div id="form-video-zone" class="form-video"></div>
-                    </div><!-- eof col-4 -->
-                </div><!-- eof .row -->
-            </div><!-- eof .container -->
-        </fieldset>
-    </form>
-</section>
-
+                        <!--  Colonne droite (vidéo) -->
+                        <div class="colonne-video col-12 col-md-4">
+                            <p class="text-center">Nos spécialistes, formés en continu, connaissent chaque destination sur le bout des doigts pour vous guider vers le voyage idéal.</p>
+                            <div id="form-video-zone"></div>
+                        </div><!-- eof col-4 -->
+                    </div><!-- eof .row -->
+                </div><!-- eof .container -->
+            </fieldset>
+        </form>
+    </section>
 
     
     <footer id="footer">
@@ -534,7 +538,7 @@
         Séjours, circuits, week-ends: Prix TTC, à partir de, sous réserve de disponibilité, base chambre double. Vols: Prix TTC à partir de, sous réserve de disponibilité, vol Aller/Retour ou Aller simple selon demande. Ces tarifs n'incluent pas les frais de dossier. Locations : prix par location pour la durée totale du séjour. Ces tarifs n'incluent pas les frais de dossier. hôtels : Prix TTC à partir de, par nuit, base chambre double. 
     </div>
     
-    <script src="assets/libraries/jquery-3.7.1.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="assets/js/app.js"></script>
     <script src="assets/js/form.js"></script>
 
