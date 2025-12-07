@@ -69,7 +69,7 @@
 
 /* ITEMS */
 .devis-form-item {
-    margin-bottom: 1rem;
+    margin-bottom: .5rem;
 }
 
 /* LABELS */
@@ -86,20 +86,20 @@
 
 /* "Vos coordonnées" */
 .devis_form_coordonnees {
-    font-size: 1rem;
+    font-size: 1.2rem;
     font-weight: bold;
     font-family: 'Playfair Display', serif;
     color: var(--secondary-color);
-    margin-bottom: 1rem;
+    margin-block: .5rem;
     text-transform: uppercase;
-    text-align: center;
 }
 
-.devis-form-column:last-child {
+.devis-coordonnees {
     background: #f6f9f3;
     border: 1px solid #d8e8d0;
     border-radius: 18px;
-    padding: 1rem 1rem; 
+    padding-inline: 1rem; 
+    margin-block: .8rem;
 }
 
 /* INPUTS & SELECTS */
@@ -121,9 +121,13 @@
 }
 
 /* Placeholder */
-.devis-form-input::placeholder {
+.devis-form-input::placeholder{
     color: #9ca3af;
     font-size: 0.9rem;
+}
+
+select.devis-form-input.form-select:invalid  {
+    color: red !important;
 }
 
 /* CHECKBOX consentement */
@@ -133,17 +137,20 @@
     accent-color: var(--primary-color);
 }
 
+.consent{
+    display: flex;
+    flex-direction: row;
+    color: var(--gray-color);
+    font-style: italic;
+    font-size: .8rem;
+}
+
 .devis-form-fieldset > p.devis-form-item:first-of-type {
     display: flex;
     align-items: flex-start;
     gap: 0.5rem;
     font-size: 0.9rem;
     color: var(--black-color);
-}
-
-/* Bouton envoyer à droite */
-.devis-form-fieldset > p.devis-form-item:last-of-type {
-    text-align: right;
 }
 
 /*Mise en forme de la vidéo et des boutons*/
