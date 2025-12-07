@@ -15,7 +15,8 @@
 
 .devis-form {
     max-width: 75rem;
-    margin: 0 auto;
+    margin: 1rem auto;
+    display: block;
 }
 
 .devis-form-fieldset{
@@ -143,4 +144,34 @@
 /* Bouton envoyer à droite */
 .devis-form-fieldset > p.devis-form-item:last-of-type {
     text-align: right;
+}
+
+/*Mise en forme de la vidéo et des boutons*/
+#form-video-zone {
+    max-width: 595px;
+    margin: 50px auto;
+    text-align: center;
+    padding: 1rem;
+    background: var(--primary-color);
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    transition: all 0.5s ease;
+}
+
+.button.bouton1-video, .button.bouton2-video {
+    border: 2px solid var(--white-color);
+}
+
+.button.bouton1-video:before {
+    content: "▶";
+    transition: all 0.3s linear;
+}
+
+.button.button.bouton2-video:before{
+    content: "❌";
+    transition: all 0.3s linear;
+}
+
+.button.bouton1-video:hover, .button.bouton2-video:hover {
+    transform: translateY(5px);
 }
