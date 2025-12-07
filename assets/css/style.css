@@ -114,7 +114,7 @@ a:hover {
  
 /* Structure 
 ****************************************/
-.row {
+.pre-row {
     display: flex;
     flex-flow: row wrap;
     max-width: 75rem;
@@ -143,7 +143,7 @@ a:hover {
     background-color: #fafafa;    
 }
 @media screen and (max-width: 38rem) {
-    #header .row{
+    #header .pre-row{
         justify-content: center;
     }
 }
@@ -1005,11 +1005,11 @@ a:hover {
     padding-left: 1rem;
     padding-right: 1rem;
 } 
-#footer .row {
+#footer .pre-row {
     flex-wrap: nowrap;
 }
 @media screen and (max-width: 38rem) {
-    #footer .row {
+    #footer .pre-row {
         flex-wrap: wrap;
     }
 }

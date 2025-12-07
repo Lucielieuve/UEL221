@@ -7,6 +7,8 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&display=swap" rel="stylesheet">
+        <!-- Lien local bootstrap css -->
+        <link rel="stylesheet" href="./assets/bootstrap/css/bootstrap.min.css"> 
 		<link rel="stylesheet" type="text/css" href="./assets/css/style.css">
         <link rel="stylesheet" type="text/css" href="./assets/css/custom_L221.css">
         <link rel="stylesheet" type="text/css" href="./assets/css/form.css">
@@ -16,7 +18,7 @@
 		
 	<header id="header">
           
-     	<div class="row align-center">
+     	<div class="pre-row align-center">
             <div class="conteneur">
                 <div class="logo_3d">
                     <div class="logo_3d_face">
@@ -38,7 +40,7 @@
             </div>
             
             <nav id="header-nav" class="column">
-                <ul class="row justify-end align-center">                   
+                <ul class="pre-row justify-end align-center">                   
                     <li class="header-nav-item">
                         <a href="#" class="header-nav-link" title="Mon compte">Mon compte</a>
                     </li>
@@ -59,7 +61,7 @@
         
         <nav id="main-nav">
             <button class="js-main-nav-button main-nav-button button">Fermer</button>
-            <ul class="row nowrap">                   
+            <ul class="pre-row nowrap">                   
                 <li class="main-nav-item">
                     <a href="#" class="main-nav-link" title="Séjours">Nos séjours</a>
                 </li>
@@ -128,11 +130,11 @@
   
     <section class="section-tips">
         
-        <div class="row">            
+        <div class="pre-row">            
             <h2>Bons plans</h2>
         </div>
         
-        <div class="row">            
+        <div class="pre-row">            
             <div class="tips-col tips-col-big">
                 <div class="tips-item">
                     <img class="tips-img" alt="" src="assets/images/vignettes/thailande.jpg">
@@ -226,13 +228,13 @@
         
         </div><!-- eof .row -->
     
-        <div class="row">            
+        <div class="pre-row">            
             <a class="section-tips-link button" href="#" title="Tous les bons plans">Tous les bons plans</a>
         </div>
     </section><!-- eof .section-tips -->
   
     <aside class="aside-newsletter">
-        <form action="#" method="POST" class="row">
+        <form action="#" method="POST" class="pre-row">
             <fieldset class="newsletter-form-fieldset">
                 <legend class="newsletter-form-legend">Newsletter</legend>
                 <p class="newsletter-form-excerpt"><strong>Inscrivez-vous</strong> et <strong>recevez</strong> nos <strong>nouveautés</strong> et <strong>offres spéciales</strong> !</p>
@@ -249,12 +251,12 @@
       		
     <section class="section-ideas">
         
-        <div class="row">
+        <div class="pre-row">
            
             <div class="ideas">
                 <h2>Nos idées voyage</h2>  
                 
-                <div class="row wrap">
+                <div class="pre-row wrap">
                     <div class="ideas-col">
                         <a href="#" title="" class="ideas-item">
                             <img class="ideas-img" src="assets/images/ideas/tout-compris.jpeg" alt="">
@@ -342,116 +344,146 @@
     </section><!-- eof .section-circuits -->
 
     <section class="form_UE_L221">
-        <form action="#" class="devis-form row">
-            <fieldset class="devis-form-fieldset">
-                <legend class="devis-form-legend">Votre devis personnalisé</legend>
+    <form action="#" class="devis-form">
+        <fieldset class="devis-form-fieldset">
+            <legend class="devis-form-legend">Votre devis personnalisé</legend>
 
-                <p>Remplissez le formulaire ci-dessous et un de nos conseillers vous contactera dans les plus brefs délais pour organiser votre voyage sur-mesure.</p>
+            <p>
+                Remplissez le formulaire ci-dessous et un de nos conseillers vous contactera
+                dans les plus brefs délais pour organiser votre voyage sur-mesure.
+            </p>
 
-                <div class="devis-form-columns">
-                    <div class="devis-form-column">
-                        <p class="devis-form-item">
-                            <label class="devis-form-label" for="devis-type-sejour">Type de séjour</label>
-                            <select name="devis-type-sejour" id="devis-type-sejour">
-                                <option value="">Sélectionnez un type</option>
-                                <option value="sejour_classique">Séjour classique (hôtel + vol)</option>
-                                <option value="circuit_organise">Circuit organisé</option>
-                                <option value="croisiere">Croisière</option>
-                                <option value="bien_etre">Séjour bien être</option>
-                                <option value="sejour_montagne">Séjour à la montagne</option>
-                                <option value="sejour_mer">Séjour à la mer</option>
-                                <option value="week-end">Week-end</option>
-                            </select>
-                        </p>
+            <div class="devis-form-columns">
+                <!-- Colonne 1 -->
+                <div class="devis-form-column">
+                    <p class="devis-form-item">
+                        <label class="devis-form-label" for="devis-type-sejour">Type de séjour</label>
+                        <select name="devis-type-sejour" id="devis-type-sejour"
+                                class="devis-form-input form-select">
+                            <option value="">Sélectionnez un type</option>
+                            <option value="sejour_classique">Séjour classique (hôtel + vol)</option>
+                            <option value="circuit_organise">Circuit organisé</option>
+                            <option value="croisiere">Croisière</option>
+                            <option value="bien_etre">Séjour bien être</option>
+                            <option value="sejour_montagne">Séjour à la montagne</option>
+                            <option value="sejour_mer">Séjour à la mer</option>
+                            <option value="week-end">Week-end</option>
+                        </select>
+                    </p>
 
-                        <p class="devis-form-item">
-                            <label class="devis-form-label" for="devis-pays">Pays souhaité</label>
-                            <input class="devis-form-input" type="text" name="devis-pays" id="devis-pays" required placeholder="Ex : France, Japon, Inde, Maroc ...">
-                        </p>
+                    <p class="devis-form-item">
+                        <label class="devis-form-label" for="devis-pays">Pays souhaité</label>
+                        <input class="devis-form-input form-control" type="text"
+                               name="devis-pays" id="devis-pays" required
+                               placeholder="Ex : France, Japon, Inde, Maroc ...">
+                    </p>
 
-                        <p class="devis-form-item">
-                            <label class="devis-form-label" for="devis-ville">Ville souhaitée</label>
-                            <input class="devis-form-input" type="text" name="devis-ville" id="devis-ville"  placeholder="Ex : Paris, Londres, Tokyo, Los Angeles ...">
-                        </p>
+                    <p class="devis-form-item">
+                        <label class="devis-form-label" for="devis-ville">Ville souhaitée</label>
+                        <input class="devis-form-input form-control" type="text"
+                               name="devis-ville" id="devis-ville"
+                               placeholder="Ex : Paris, Londres, Tokyo, Los Angeles ...">
+                    </p>
 
-                        <p class="devis-form-item">
-                            <label class="devis-form-label" for="search-adultes">Adultes : </label>
-                            <select class="devis-form-input" name="devis-adultes" id="devis-adultes" required>
-                                    <option value="">0</option>
-                                    <option value="1">1</option>
-                                    <option value="2">2</option>
-                                    <option value="3">3</option>
-                            </select>
-                        </p>     
+                    <p class="devis-form-item">
+                        <label class="devis-form-label" for="devis-adultes">Adultes :</label>
+                        <select class="devis-form-input form-select"
+                                name="devis-adultes" id="devis-adultes" required>
+                            <option value="">0</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                        </select>
+                    </p>
 
-                        <p class="devis-form-item">
-                            <label class="devis-form-label" for="devis-enfants">Enfants : </label>
-                            <select class="devis-form-input" name="devis-enfants" id="devis-enfants" required>
-                                <option value="">0</option>
-                                <option value="1">1</option>
-                                <option value="2">2</option>
-                                <option value="3">3</option>
-                            </select>
-                        </p>
-                    </div>
+                    <p class="devis-form-item">
+                        <label class="devis-form-label" for="devis-enfants">Enfants :</label>
+                        <select class="devis-form-input form-select"
+                                name="devis-enfants" id="devis-enfants" required>
+                            <option value="">0</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                        </select>
+                    </p>
+                </div>
 
-                    <div class="devis-form-column">
-                        <p class="devis-form-item">
-                            <label class="devis-form-label" for="devis-duree">Durée du séjour</label>
-                            <input class="devis-form-input" type="text" name="devis-duree" id="devis-duree"  placeholder="Nombre de jours">
-                        </p>
+                <!-- Colonne 2 -->
+                <div class="devis-form-column">
+                    <p class="devis-form-item">
+                        <label class="devis-form-label" for="devis-duree">Durée du séjour</label>
+                        <input class="devis-form-input form-control" type="text"
+                               name="devis-duree" id="devis-duree"
+                               placeholder="Nombre de jours">
+                    </p>
 
-                        <p class="devis-form-item">                        
-                            <label class="devis-form-label" for="devis-start">Date de départ</label>
-                            <input class="devis-form-input" type="date" name="devis-start" id="devis-start" required>
-                        </p>
-                    
-                        <p class="devis-form-item">
-                            <label class="devis-form-label" for="devis-budget">Budget envisagé</label>
-                            <select name="devis-budget" id="devis-budget">
-                                <option value="">Sélectionnez votre budget</option>
-                                <option value="budget1"> < 500 € </option>
-                                <option value="budget2">500 € à 1 000 €</option>
-                                <option value="budget3"> 1 000 € à 2 000 € </option>
-                                <option value="budget4"> > 2 000 € </option>
-                            </select>
-                        </p>
+                    <p class="devis-form-item">
+                        <label class="devis-form-label" for="devis-start">Date de départ</label>
+                        <input class="devis-form-input form-control" type="date"
+                               name="devis-start" id="devis-start" required>
+                    </p>
 
-                        <p class="devis-form-item">
-                            <label class="devis-form-label" for="devis-commentaire">Commentaire ou demande spécifique</label>
-                            <input class="devis-form-input" type="text" name="devis-commentaire" id="devis-commentaire"  placeholder="Laissez nous savoir">
-                        </p>
-                    </div>
+                    <p class="devis-form-item">
+                        <label class="devis-form-label" for="devis-budget">Budget envisagé</label>
+                        <select name="devis-budget" id="devis-budget"
+                                class="devis-form-input form-select">
+                            <option value="">Sélectionnez votre budget</option>
+                            <option>< 500 €</option>
+                            <option>500 € à 1 000 €</option>
+                            <option>1 000 € à 2 000 €</option>
+                            <option>> 2 000 €</option>
+                        </select>
+                    </p>
 
-                     <div class="devis-form-column">
-                        <p class="devis_form_coordonnees">Vos coordonnées</p>
-                        <p class="devis-form-item">
-                            <label class="devis-form-label" for="devis-mail">Mail</label>
-                            <input class="devis-form-input" type="text" name="devis-mail" id="devis-mail" required>
-                        </p>
+                    <p class="devis-form-item">
+                        <label class="devis-form-label" for="devis-commentaire">
+                            Commentaire ou demande spécifique
+                        </label>
+                        <input class="devis-form-input form-control" type="text"
+                               name="devis-commentaire" id="devis-commentaire"
+                               placeholder="Laissez nous savoir">
+                    </p>
+                </div>
 
-                        <p class="devis-form-item">
-                            <label class="devis-form-label" for="devis-tel">Téléphone</label>
-                            <input class="devis-form-input" type="text" name="devis-tel" id="devis-tel" required>
-                        </p>
-                    </div>
-                </div> <!--eof columns-->
+                <!-- Colonne 3 -->
+                <div class="devis-form-column">
+                    <p class="devis_form_coordonnees">Vos coordonnées</p>
 
-                <p class="devis-form-item">
-                    <input class="devis-form-input" type="checkbox" name="devis-consent" id="devis-consent" required>
-                    Je consens à ce que mes informations soient récupérées et traitées pour ensuite être contacté par un conseiller Voyage Tour.
-                </p>
+                    <p class="devis-form-item">
+                        <label class="devis-form-label" for="devis-mail">Mail</label>
+                        <input class="devis-form-input form-control" type="email"
+                               name="devis-mail" id="devis-mail" required>
+                    </p>
 
-                <p class="devis-form-item">
-                    <input class="devis-form-submit button" type="submit" value="Envoyer">
-                </p>    
-            </fieldset>
-        </form>
-        <div id="form-video-zone"></div>
-    </section>
+                    <p class="devis-form-item">
+                        <label class="devis-form-label" for="devis-tel">Téléphone</label>
+                        <input class="devis-form-input form-control" type="text"
+                               name="devis-tel" id="devis-tel" required>
+                    </p>
+                </div>
+            </div> <!-- eof devis-form-columns -->
+
+            <p class="devis-form-item">
+                <input class="devis-form-input" type="checkbox"
+                       name="devis-consent" id="devis-consent" required>
+                Je consens à ce que mes informations soient récupérées et traitées pour ensuite être contacté
+                par un conseiller Voyage Tour.
+            </p>
+
+            <p class="devis-form-item">
+                <button class="devis-form-submit button btn btn-primary" type="submit">
+                    Envoyer
+                </button>
+            </p>
+        </fieldset>
+    </form>
+
+    <div id="form-video-zone"></div>
+</section>
+
     
     <footer id="footer">
-        <div class="row">
+        <div class="pre-row">
         
             <div class="footer-stats">
             <div class="footer-stats-item">

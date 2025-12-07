@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Devis Voyage</title>
+
+    <!-- Lien local bootstrap css -->
+    <link rel="stylesheet" href="./assets/bootstrap/css/bootstrap.min.css">
+</head>
+
+<body>
+
+    <section class="form_UE_L221 py-5">
+        <div class="container">
+            <h1 class="mb-4 text-center">Votre devis personnalisé</h1>
+
+            <p class="text-center mb-4">
+                Remplissez le formulaire ci-dessous et un de nos conseillers vous contactera
+                dans les plus brefs délais pour organiser votre voyage sur-mesure.
+            </p>
+
+            <form action="#" class="devis-form">
+                <fieldset class="devis-form-fieldset">
+
+                    <div class="row g-4">
+
+                        <!-- Colonne 1 -->
+                        <div class="col-md-4">
+                            <label for="devis-type-sejour" class="form-label">Type de séjour</label>
+                            <select id="devis-type-sejour" class="form-select">
+                                <option value="">Sélectionnez un type</option>
+                                <option value="sejour_classique">Séjour classique (hôtel + vol)</option>
+                                <option value="circuit_organise">Circuit organisé</option>
+                                <option value="croisiere">Croisière</option>
+                                <option value="bien_etre">Séjour bien-être</option>
+                                <option value="sejour_montagne">Séjour à la montagne</option>
+                                <option value="sejour_mer">Séjour à la mer</option>
+                                <option value="week-end">Week-end</option>
+                            </select>
+
+                            <label for="devis-pays" class="form-label mt-3">Pays souhaité</label>
+                            <input
+                                type="text" id="devis-pays" class="form-control"
+                                placeholder="Ex : France, Japon, Inde..." required>
+
+                            <label for="devis-ville" class="form-label mt-3">Ville souhaitée</label>
+                            <input
+                                type="text" id="devis-ville" class="form-control"
+                                placeholder="Ex : Paris, Londres, Tokyo...">
+
+                            <label for="devis-adultes" class="form-label mt-3">Adultes</label>
+                            <select id="devis-adultes" class="form-select">
+                                <option value="">0</option>
+                                <option>1</option><option>2</option><option>3</option>
+                            </select>
+
+                            <label for="devis-enfants" class="form-label mt-3">Enfants</label>
+                            <select id="devis-enfants" class="form-select">
+                                <option value="">0</option>
+                                <option>1</option><option>2</option><option>3</option>
+                            </select>
+                        </div>
+
+                        <!-- Colonne 2 -->
+                        <div class="col-md-4">
+                            <label for="devis-duree" class="form-label">Durée du séjour</label>
+                            <input
+                                type="text" id="devis-duree" class="form-control"
+                                placeholder="Nombre de jours">
+
+                            <label for="devis-start" class="form-label mt-3">Date de départ</label>
+                            <input
+                                type="date" id="devis-start" class="form-control" required>
+
+                            <label for="devis-budget" class="form-label mt-3">Budget envisagé</label>
+                            <select id="devis-budget" class="form-select">
+                                <option value="">Sélectionnez votre budget</option>
+                                <option>< 500 €</option>
+                                <option>500 € à 1 000 €</option>
+                                <option>1 000 € à 2 000 €</option>
+                                <option>> 2 000 €</option>
+                            </select>
+
+                            <label for="devis-commentaire" class="form-label mt-3">Commentaire</label>
+                            <input
+                                type="text" id="devis-commentaire" class="form-control"
+                                placeholder="Vos attentes, idées...">
+                        </div>
+
+                        <!-- Colonne 3 -->
+                        <div class="col-md-4">
+                            <h5 class="mb-3">Vos coordonnées</h5>
+
+                            <label for="devis-mail" class="form-label">Mail</label>
+                            <input
+                                type="email" id="devis-mail" class="form-control" required>
+
+                            <label for="devis-tel" class="form-label mt-3">Téléphone</label>
+                            <input
+                                type="text" id="devis-tel" class="form-control" required>
+                        </div>
+
+                    </div>
+
+                    <!-- Partie consentement -->
+                    <div class="form-check mt-4">
+                        <input class="form-check-input" type="checkbox" id="devis-consent" required>
+                        <label for="devis-consent" class="form-check-label">
+                            Je consens à ce que mes informations soient utilisées pour être contacté.
+                        </label>
+                    </div>
+
+                    <!-- Bouton envoyer -->
+                    <button type="submit" class="btn btn-primary mt-4">
+                        Envoyer
+                    </button>
+
+                </fieldset>
+            </form>
+        </div>
+        <div id="form-video-zone"></div>
+    </section>
+
+    <!-- lien local bootstrap js -->
+    <script src="./assets/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
