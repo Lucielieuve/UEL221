@@ -18,20 +18,22 @@ window.addEventListener('DOMContentLoaded', function () {
 
     const videoContainer = document.createElement('div');
     videoContainer.style.display = 'none';
-
+    videoContainer.style.maxHeight = '0';
+    videoContainer.style.overflow = 'hidden';
+    videoContainer.style.transition = 'max-height 0.8s ease-in-out'; //Transition de l'apparition de la video
     
+    const texte_a_cacher = this.document.getElementById('a_cacher');
     // Ajouter tous les éléments dans la zone
     zone.appendChild(btn1);
     zone.appendChild(videoContainer);
     zone.appendChild(btn2);
-    
 
     // Créer la zone vidéo
     function createvideo(){
         
         const video = document.createElement('iframe'); //iframe puisque c'est une vidéo Youtube
-        video.setAttribute('width', '280');
-        video.setAttribute('height', '155');
+        video.setAttribute('width', '320');
+        video.setAttribute('height', '150');
         video.setAttribute('src', 'https://www.youtube.com/embed/dxWDcP1gvNk?si=tdWOGFB_RidNjOF9&autoplay=1');
         video.setAttribute('title', 'Vidéo Youtube voyage');
         video.setAttribute('frameborder', '0');
@@ -44,25 +46,36 @@ window.addEventListener('DOMContentLoaded', function () {
 
     // Gérer les différents click
     btn1.addEventListener('click', function () {
-        videoContainer.style.display = 'block';
-        btn1.style.display = 'none';
-        btn2.style.display = 'inline-block';
 
         //On vérifie que la video n'existe pas encore
         if (!videoContainer.querySelector('iframe')) {
             const video = createvideo();
             videoContainer.appendChild(video);
         }
+
+        videoContainer.style.display = 'block';
+        setTimeout(() => {
+            videoContainer.style.maxHeight = '200px';
+        }, 10); //On active l'animation, 10ms suffisant puisque animation a sa propre durée
+        btn1.style.display = 'none';
+        btn2.style.display = 'inline-block';
+        texte_a_cacher.style.display = 'none';
     });
 
     btn2.addEventListener('click', function () {
-        videoContainer.style.display = 'none';
-        btn2.style.display = 'none';
-        btn1.style.display = 'inline-block';
+
+        videoContainer.style.maxHeight = '0';
+
+        setTimeout(() => {
+            videoContainer.style.display = 'none';
+            btn2.style.display = 'none';
+            btn1.style.display = 'inline-block';
+            texte_a_cacher.style.display = 'block';
         
-        const video_en_cours = videoContainer.querySelector('iframe');
-        if (video_en_cours) {
-            video_en_cours.remove();
-        }
+            const video_en_cours = videoContainer.querySelector('iframe');
+            if (video_en_cours) {
+                video_en_cours.remove();
+            }
+        }, 800); //Durée supérieure ici puisqu'on enlève les éléments pas à pas  
     });
 });
