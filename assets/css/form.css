@@ -92,6 +92,7 @@
     color: var(--secondary-color);
     margin-block: .5rem;
     text-transform: uppercase;
+    text-align: center;
 }
 
 .devis-coordonnees {
@@ -181,4 +182,11 @@ select.devis-form-input.form-select:invalid  {
 
 .button.bouton1-video:hover, .button.bouton2-video:hover {
     transform: translateY(5px);
+}
+
+/*Changements bootstrap*/
+.alert {
+    background-color: ghostwhite;
+    border: none;
+    color: #1B1B1B;
 }
